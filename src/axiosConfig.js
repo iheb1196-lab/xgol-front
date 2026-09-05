@@ -1,4 +1,5 @@
 import axios from "axios";
+import { backendUrl } from "./url";
 
 function isTokenExpired(token) {
   if (!token) return true; // Token does not exist, consider it expired
@@ -19,7 +20,7 @@ function getTokenExpirationTime(token) {
 
 async function refreshAuthToken() {
   try {
-    const { data } = await axios.get(`http://localhost:8080/api/refresh`);
+    const { data } = await axios.get(`${backendUrl}/api/refresh`);
     return data;
   } catch (error) {
     return error.response.data.message;
