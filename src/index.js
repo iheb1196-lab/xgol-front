@@ -11,7 +11,6 @@ import { store, persistor } from "./store";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import { PrimeReactProvider } from "primereact/api";
-import setupLocatorUI from "@locator/runtime";
 import ToastProvider from "./components/toasts/ToastProvider";
 import { ThemeProvider } from "@mui/material";
 import theme from "constants/theme.constant";

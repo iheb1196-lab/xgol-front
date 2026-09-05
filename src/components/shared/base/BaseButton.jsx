@@ -24,7 +24,9 @@ export const Outlined = ({ className, onClick, ...props }) => {
   );
 };
 
-export default {
+const BaseButton = {
   Rased,
   Outlined,
 };
+
+export default BaseButton;

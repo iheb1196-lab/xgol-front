@@ -16,23 +16,6 @@ import { jwtDecode } from "jwt-decode";
 
 // ----------------------------------------------------------------------
 
-const MENU_OPTIONS = [
-  {
-    label: "Home",
-    icon: "eva:home-fill",
-  },
-  {
-    label: "Profile",
-    icon: "eva:person-fill",
-  },
-  {
-    label: "Settings",
-    icon: "eva:settings-2-fill",
-  },
-];
-
-// ----------------------------------------------------------------------
-
 export default function AccountPopover() {
   // const { accessToken, isAuthenticated } = useSelector((state) => state.auth);
   const accessToken = localStorage.getItem("accessToken");

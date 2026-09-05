@@ -19,7 +19,7 @@ const MySpeechesView = () => {
 
   useEffect(() => {
     dispatch(getSpeeches());
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
     setSpeechesDataView(

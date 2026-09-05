@@ -8,7 +8,7 @@ const Banner = () => {
       </h4>
       <div>
         <div className="header-container">
-          <img src={`/assets/icons/landing/banner1.svg`} />
+          <img src={`/assets/icons/landing/banner1.svg`} alt="" />
           <h3>Comprehensive Admin Control
           </h3>
         </div>
@@ -18,7 +18,7 @@ const Banner = () => {
       </div>
       <div>
         <div className="header-container">
-          <img src={`/assets/icons/landing/banner2.svg`} />
+          <img src={`/assets/icons/landing/banner2.svg`} alt="" />
           <h3>Snacking Coaching
           </h3>
         </div>
@@ -28,7 +28,7 @@ const Banner = () => {
       </div>
       <div>
         <div className="header-container">
-          <img src={`/assets/icons/landing/banner3.svg`} />
+          <img src={`/assets/icons/landing/banner3.svg`} alt="" />
           <h3>Quality Assurance</h3>
         </div>
         <p>
@@ -37,7 +37,7 @@ const Banner = () => {
       </div>
       <div>
         <div className="header-container">
-          <img src={`/assets/icons/landing/banner3.svg`} />
+          <img src={`/assets/icons/landing/banner3.svg`} alt="" />
           <h3>AI-Enhanced Speech Development</h3>
         </div>
         <p>

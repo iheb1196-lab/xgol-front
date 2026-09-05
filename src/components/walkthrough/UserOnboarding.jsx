@@ -1,5 +1,3 @@
-import _ from "lodash";
-import classNames from "classnames";
 import { Dialog } from "primereact/dialog";
 import { useState } from "react";
 import { Icon } from "@iconify/react";
@@ -9,7 +7,7 @@ import { useSelector } from "react-redux";
 import useLocalStorage from "hooks/useLocalStorage";
 import { Indicators } from "./shared/OnboardingContent";
 
-export default () => {
+const UserOnboarding = () => {
   const { user } = useSelector((state) => state.auth.user);
 
   const [viewed, setViewed] = useLocalStorage([
@@ -79,6 +77,7 @@ export default () => {
         <img
           src={`/assets/icons/onboarding/${steps[stepIndex].image}`}
           className="w-[70px] h-[70px] self-center mb-4"
+          alt=""
         />
         <div className="w-full text-black font-md text-[24px] text-center font-poppins mb-4">
           {steps[stepIndex].title}
@@ -91,6 +90,8 @@ export default () => {
     </Dialog>
   );
 };
+
+export default UserOnboarding;
 
 const steps = [
   // {

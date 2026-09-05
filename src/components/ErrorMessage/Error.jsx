@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { useMountEffect } from "primereact/hooks";
 import { Messages } from "primereact/messages";
-import { Box, Card } from "@mui/material";
+import { Box } from "@mui/material";
 
 export default function Error({message}) {
   const msgs = useRef(null);

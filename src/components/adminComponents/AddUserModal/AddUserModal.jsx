@@ -3,7 +3,6 @@ import { Box, Modal } from "@mui/material";
 import React, { useRef, useState } from "react";
 import "./addUserModal.scss";
 import { InputText } from "primereact/inputtext";
-import { Button } from "primereact/button";
 import { assignLicenseAdmin } from "../../../features/admin/adminSlice";
 import { useDispatch } from "react-redux";
 import { Toast } from "primereact/toast";

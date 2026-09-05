@@ -1,4 +1,4 @@
-const getIcon = (x) => <img src={`/assets/icons/landing/slide${x}.svg`} />;
+const getIcon = (x) => <img src={`/assets/icons/landing/slide${x}.svg`} alt="" />;
 
 export const slides = [
   {

@@ -12,7 +12,7 @@ const SubscriptionUpgradeView = () => {
   const dispatch = useDispatch();
   const router = useRouter();
 
-  const { response, loading, error } = useSelector((state) => state.dashboard);
+  const { loading } = useSelector((state) => state.dashboard);
   const methods = useForm();
   const { showToast } = useToast();
 

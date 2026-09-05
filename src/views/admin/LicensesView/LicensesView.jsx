@@ -1,5 +1,5 @@
 import RouterLink from "../../../routes/components/router-link";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Breadcrumbs, Typography, Box } from "@mui/material";
 
 import { useDispatch, useSelector } from "react-redux";
@@ -14,7 +14,7 @@ const LicensesView = () => {
   const { response, loading } = useSelector((state) => state.admin);
   useEffect(() => {
     dispatch(getCorporateLicensesAdmin());
-  }, []);
+  }, [dispatch]);
   const breadcrumbs = [
     <RouterLink href="/" className="link" key="1">
       <img src="/assets/icons/breadcrumbs/home.svg" alt="" />

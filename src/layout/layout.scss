@@ -3,8 +3,8 @@ $gray: #dcdfea;
 .layout-container {
   background-color: $gray;
   display: flex;
-  align-items: start;
-  justify-content: start;
+  align-items: flex-start;
+  justify-content: flex-start;
   padding: 24px;
   overflow: hidden;
 

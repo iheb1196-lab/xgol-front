@@ -4,7 +4,7 @@ import BaseButton from "components/shared/base/BaseButton";
 import { tailwindTheme } from "constants/theme.constant";
 import _ from "lodash";
 
-export default ({
+const OnboardingContent = ({
   onHideClick,
   isFirst,
   isLast,
@@ -35,6 +35,7 @@ export default ({
         <img
           src={`/assets/icons/onboarding/${step.image}`}
           className="w-[70px] h-[70px] self-center mb-4"
+          alt=""
         />
         <div className="w-full text-black font-md text-[24px] text-center font-poppins mb-4">
           {step.title}
@@ -57,6 +58,8 @@ export default ({
     </div>
   );
 };
+
+export default OnboardingContent;
 
 export const Indicators = ({ count, selected }) => {
   return (
