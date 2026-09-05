@@ -1,0 +1,100 @@
+.practice_session {
+  .session_body {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+
+    .session_side {
+      flex: 1;
+      max-width: 440px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .session_card {
+      background: #f9f9fb;
+      border-radius: 16px;
+      padding: 20px 24px;
+      box-sizing: border-box;
+
+      h4 {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin: 0 0 14px;
+        font-size: 15px;
+        font-weight: 600;
+        color: #101828;
+      }
+
+      .session_audio {
+        width: 100%;
+      }
+
+      .audio_error,
+      .audio_loading {
+        margin: 0;
+        font-size: 13px;
+        color: #5d6b98;
+      }
+
+      .session_objective {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 16px;
+
+        .objective_label {
+          font-size: 13px;
+          font-weight: 500;
+          color: #5d6b98;
+        }
+      }
+
+      .session_script {
+        margin: 0;
+        font-size: 14px;
+        line-height: 24px;
+        color: #5d6b98;
+        white-space: pre-wrap;
+        max-height: 320px;
+        overflow-y: auto;
+      }
+    }
+
+    .session_feedback {
+      flex: 1.4;
+      min-width: 0;
+
+      h3 {
+        margin: 0 0 16px;
+        font-size: 18px;
+        font-weight: 600;
+        color: #101828;
+      }
+
+      .comparison_source {
+        margin: -4px 0 16px;
+        padding: 10px 12px;
+        border-left: 3px solid #af49fa;
+        border-radius: 6px;
+        background: #faf5ff;
+        color: #5d4a76;
+        font-size: 13px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .practice_session .session_body {
+    flex-direction: column;
+
+    .session_side {
+      max-width: none;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+$primary: #af49fa;
+$secondary: #f7edff;
+
+.custom_button {
+  box-sizing: border-box;
+  height: 44px;
+  padding: 12px 24px 12px 24px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #b8bed5;
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+  gap: 10px;
+  cursor: pointer;
+  .number {
+    padding-top: 1px;
+    box-sizing: border-box;
+    background-color: #af49fa;
+    color: white;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: grid;
+    place-items: center;
+  }
+  .disabled_number {
+    padding-top: 1px;
+    box-sizing: border-box;
+    background-color: white;
+    color: gray;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: grid;
+    place-items: center;
+  }
+}
+.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background-color: #b8bed5;
+  border-color: gray;
+}

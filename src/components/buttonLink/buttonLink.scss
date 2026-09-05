@@ -1,0 +1,20 @@
+$primary: #9f42e4;
+$secondary: #f7edff;
+
+.button {
+  box-sizing: border-box;
+  width: 260px;
+  height: 44px;
+  padding: 12px 24px 12px 24px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #b8bed5;
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+}

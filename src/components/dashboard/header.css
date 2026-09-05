@@ -1,0 +1,171 @@
+.text-container{
+    /* Text and supporting text */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 4px;
+
+width: 847px;
+height: 66px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+}
+.text {
+    /* Text */
+
+width: 847px;
+height: 38px;
+
+/* Display sm/Medium */
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 30px;
+line-height: 38px;
+/* identical to box height, or 127% */
+
+/* Gray/900 */
+color: #111322;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+
+}
+.supporting-text {
+    /* Supporting text */
+
+width: 847px;
+height: 24px;
+
+/* Text md/Normal */
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+
+/* Gray/500 */
+color: #5D6B98;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+}
+.profile-container {
+    /* Profile */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 16px;
+
+width: 166px;
+height: 64px;
+
+background: linear-gradient(202.39deg, #FAF5FF -14.01%, rgba(255, 255, 255, 0) 104.51%);
+/* Gray/200 */
+border: 1px solid #DCDFEA;
+border-radius: 16px;
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+}
+.profile {
+    /* Profile */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+width: 134px;
+height: 32px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+.photo {
+    /* Photo */
+
+width: 32px;
+height: 32px;
+
+background: #FFFFFF;
+/* Foundation /XGol/xgol-200 */
+border: 1px solid #DAABFD;
+border-radius: 100px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+.image {
+    /* Image */
+
+position: absolute;
+width: 32px;
+height: 32px;
+left: 0px;
+top: 0px;
+
+border-radius: 100px;
+
+}
+.profile-text {
+    /* Hi, Souad */
+
+width: 94px;
+height: 30px;
+
+/* Text xl/Medium */
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 30px;
+/* identical to box height, or 150% */
+display: flex;
+align-items: center;
+
+/* Base/Black */
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+}
+  

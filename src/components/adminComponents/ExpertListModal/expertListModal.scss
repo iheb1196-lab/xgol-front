@@ -1,0 +1,60 @@
+.selected-row {
+  background-color: #e6c7fd !important; 
+  font-weight: bold; 
+}
+
+.admin_box_modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 630px;
+    padding: 44px;
+    border-radius: 20px;
+    gap: 16px;
+    box-sizing: border-box;
+    z-index: 10000; /* Ensure the modal stays on top */
+    
+    .add {
+      cursor: pointer;
+    }
+    label {
+      color: gray;
+      font-size: 14px;
+    }
+    input {
+      width: 100%;
+      height: 52px;
+      box-sizing: border-box;
+    }
+    .p-button {
+      width: 100%;
+    }
+  
+    h3 {
+      font-family: Poppins;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 32px;
+      letter-spacing: 0em;
+      margin: 0;
+      margin-bottom: 20px;
+    }
+    p {
+      font-family: Poppins;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+      margin: 0;
+    }
+}
+
+.p-datatable-wrapper {
+    overflow: visible !important; /* Ensure pagination is visible */
+    z-index: 10001; /* Ensure the table content is above modal if needed */
+}
+
+.p-paginator {
+    z-index: 10001 !important; /* Ensure pagination stays above other elements */
+}

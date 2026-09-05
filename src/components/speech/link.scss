@@ -1,0 +1,23 @@
+/* Text */
+.review-feedback{
+    width: 73px;
+    height: 20px;
+    
+    /* Text sm / Normal underlined */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    text-decoration-line: underline;
+    
+    /* Primary/500 */
+    color: #0083FF;
+    
+    
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}

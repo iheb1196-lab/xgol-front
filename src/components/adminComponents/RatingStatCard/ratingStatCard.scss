@@ -1,0 +1,17 @@
+.stat_card {
+  box-sizing: border-box;
+  width: 32%;
+  height: 132px;
+  padding: 24px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  border-radius: 16px;
+  border: 1px solid #dcdfea;
+  .stats {
+    p,
+    h2 {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,98 @@
+.sbup-container {
+  padding: 56px 32px 56px 32px;
+  //   height: 100%;
+  display: flex;
+  flex-direction: column;
+  .breadcrumbs {
+    display: flex;
+    align-items: center;
+    //styleName: Text sm/Medium;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
+    color: #5d6b98;
+  }
+
+  .title {
+    font-family: Poppins;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 44px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: black;
+    margin-bottom: 4px;
+    margin-top: 20px;
+  }
+  .subtitle {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    color: #5d6b98;
+    margin-bottom: 44px;
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 24px;
+    .form-wrapper {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      gap: 16px;
+      .text-container {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        flex: 1;
+        .text-lg {
+          //styleName: Text lg/Medium;
+          font-family: Poppins;
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 28px;
+          text-align: left;
+          color: #111322;
+        }
+        .text-sm {
+          //styleName: Text sm/Normal;
+          font-family: Poppins;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 20px;
+          text-align: left;
+          color: #5d6b98;
+        }
+        .form-fields-container {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          margin-top: 12px;
+          margin-bottom: 12px;
+
+          .form-fields {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            .form-label {
+              font-family: Poppins;
+              font-size: 14px;
+              font-weight: 500;
+              line-height: 20px;
+              text-align: left;
+              color: #404968;
+              width: 15%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.practice_history {
+  .my_speeches_body {
+    flex: 1;
+  }
+
+  .no_sessions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 8px;
+    text-align: center;
+
+    h3 {
+      margin: 12px 0 0;
+      font-size: 18px;
+      font-weight: 500;
+      color: #101828;
+    }
+
+    p {
+      margin: 0;
+      font-size: 14px;
+      color: #5d6b98;
+    }
+  }
+
+  .practice_status {
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 500;
+
+    &--completed {
+      background: #ecfdf3;
+      color: #12b76a;
+    }
+
+    &--failed {
+      background: #fff0f0;
+      color: #f00d05;
+    }
+
+    &--processing {
+      background: #e6c7fd;
+      color: #9f42e4;
+    }
+  }
+}

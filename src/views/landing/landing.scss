@@ -1,0 +1,35 @@
+.landing-container {
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  img {
+    height: 38px;
+  }
+
+  .landing_body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    .swiper-container {
+      // height: 400px;
+      position: relative;
+    }
+    .buttons-container {
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      padding: 40px;
+      gap: 20px;
+    }
+  }
+  .tagline {
+    color: gray;
+  }
+}

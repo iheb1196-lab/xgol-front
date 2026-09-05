@@ -1,0 +1,19 @@
+.verify-email-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  .verify-email {
+    width: 504px;
+    height: 288px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    p {
+      margin: 0;
+      text-align: center;
+    }
+  }
+}

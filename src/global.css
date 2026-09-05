@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif !important;
+  height: 100vh;
+}
+* {
+  box-sizing: unset;
+}
+
+a {
+  text-decoration: none;
+}
+.MuiInputBase-root,
+.MuiButtonBase-root {
+  border-radius: 10px !important;
+}
+.MuiInputLabel-root,
+.MuiButtonBase-root,
+.MuiInputBase-input,
+.MuiTypography-root,
+.MuiDataGrid-root {
+  font-family: "Poppins", sans-serif !important;
+}
+
+.p-button {
+  border-radius: 10px;
+  height: 44px;
+  padding: 12px 24px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.p-button-label {
+  font-size: 16px;
+  font-weight: 500 !important;
+  line-height: 24px;
+  font-family: "poppins";
+}
+.p-button-help {
+  background-color: #9f42e4;
+}
+.p-progressbar {
+  height: 8px;
+}
+.active_breadcrumb {
+  background-color: #e6c7fd !important;
+  padding: 4px 8px !important;
+  color: #9f42e4 !important;
+  border-radius: 6px !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  font-weight: 500 !important;
+}
+.secondary_button_tag {
+  background-color: #e6c7fd !important;
+  padding: 4px 8px !important;
+  color: #9f42e4 !important;
+  border-radius: 6px !important;
+  font-size: 14px !important;
+  line-height: 20px !important;
+  font-weight: 500 !important;
+}
+.view-container {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  gap: 22px;
+  height: 100%;
+  overflow: auto;
+}
+.view_header .link {
+  font-size: 14px;
+  display: grid;
+  place-items: center;
+}
+.view_header .link:hover {
+  text-decoration: underline;
+}
+.view_header .second_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+
+.view_header .second_header Button {
+  margin-left: 10px; /* Adds a small space between the buttons */
+}
+.view_header h2 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 38px;
+}
+.view_header p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0;
+  color: gray;
+}
+.view_header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  border-radius: 25px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #e6c7fd;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #dcdfea;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #9c41e2;
+}

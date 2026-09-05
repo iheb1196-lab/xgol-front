@@ -1,0 +1,11 @@
+.custom_input {
+  padding: 16.5px 14px ;
+  border-radius: 10px;
+  border: 1px solid #b8bed5;
+  &::placeholder{
+    color: #B8BED5;
+  }
+  &:focus-visible{
+    outline: none;
+  }
+}

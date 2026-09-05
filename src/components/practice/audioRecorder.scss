@@ -1,0 +1,194 @@
+.audio_recorder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9fb;
+  border-radius: 16px;
+  padding: 32px 24px;
+  min-height: 220px;
+  box-sizing: border-box;
+  width: 100%;
+
+  &.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+
+  .recorder_idle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+
+    h3 {
+      margin: 8px 0 0;
+      font-size: 18px;
+      font-weight: 500;
+      color: #101828;
+    }
+
+    p {
+      margin: 0;
+      font-size: 14px;
+      color: #5d6b98;
+      max-width: 360px;
+    }
+
+    .recorder_error {
+      margin-top: 8px;
+      font-size: 13px;
+      color: #f00d05;
+    }
+  }
+
+  .mic_button {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    border: none;
+    background: #af49fa;
+    color: white;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 0 10px #e6c7fd;
+    transition: transform 0.15s ease, background 0.15s ease;
+
+    &:hover {
+      background: #9f42e4;
+      transform: scale(1.04);
+    }
+  }
+
+  .recorder_recording {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+
+    .recording_status {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 15px;
+      color: #101828;
+
+      .recording_dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #f00d05;
+        animation: recorder-pulse 1.2s ease-in-out infinite;
+      }
+
+      .recording_label {
+        font-weight: 500;
+      }
+
+      .recording_time {
+        font-variant-numeric: tabular-nums;
+        font-weight: 600;
+        color: #9f42e4;
+      }
+
+      .recording_remaining {
+        font-size: 13px;
+        color: #5d6b98;
+      }
+    }
+
+    .level_bars {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      height: 52px;
+
+      .level_bar {
+        width: 5px;
+        border-radius: 4px;
+        background: #af49fa;
+        transition: height 0.1s linear;
+      }
+    }
+
+    .stop_button {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border: none;
+      background: #101828;
+      color: white;
+      border-radius: 10px;
+      padding: 12px 24px;
+      font-family: Poppins, sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+
+      &:hover {
+        background: #292d32;
+      }
+    }
+  }
+
+  .recorder_review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+
+    .review_header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 15px;
+      font-weight: 500;
+      color: #101828;
+
+      .review_check {
+        color: #12b76a;
+      }
+    }
+
+    .review_player {
+      width: 100%;
+      max-width: 420px;
+    }
+
+    .retake_button {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid #b8bed5;
+      background: white;
+      color: #5d6b98;
+      border-radius: 10px;
+      padding: 10px 18px;
+      font-family: Poppins, sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+
+      &:hover {
+        border-color: #9f42e4;
+        color: #9f42e4;
+      }
+    }
+  }
+}
+
+@keyframes recorder-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.85);
+  }
+}

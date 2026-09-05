@@ -1,0 +1,207 @@
+.practice_view {
+  .practice_steps {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    .practice_step {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #5d6b98;
+
+      .step_index {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        font-size: 12px;
+        font-weight: 600;
+        background: #eceef5;
+        color: #5d6b98;
+      }
+
+      &.done {
+        color: #9f42e4;
+
+        .step_index {
+          background: #e6c7fd;
+          color: #9f42e4;
+        }
+      }
+    }
+  }
+
+  .practice_body {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    flex: 1;
+    min-height: 0;
+
+    .practice_script {
+      flex: 1;
+      min-width: 320px;
+      max-width: 480px;
+      background: #f9f9fb;
+      border-radius: 16px;
+      padding: 24px;
+      position: sticky;
+      top: 0;
+      max-height: 100%;
+      overflow-y: auto;
+      box-sizing: border-box;
+
+      .speech-title {
+        font-size: 20px;
+        font-weight: 600;
+        color: #5d6b98;
+        margin: 0;
+      }
+
+      .speech-text {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 28px;
+        color: #5d6b98;
+        margin: 0;
+        white-space: pre-wrap;
+      }
+
+      .divider {
+        margin: 20px 0;
+        background-color: rgb(214, 214, 214);
+        padding: 0.5px;
+        border: none;
+      }
+    }
+
+    .practice_main {
+      flex: 1.4;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      min-width: 0;
+    }
+
+    .practice_card {
+      background: white;
+      border: 1px solid #eceef5;
+      border-radius: 16px;
+      padding: 24px;
+      box-sizing: border-box;
+
+      h3 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 6px;
+        font-size: 17px;
+        font-weight: 600;
+        color: #101828;
+
+        .card_step {
+          width: 26px;
+          height: 26px;
+          border-radius: 50%;
+          display: grid;
+          place-items: center;
+          background: #e6c7fd;
+          color: #9f42e4;
+          font-size: 13px;
+          font-weight: 600;
+          flex-shrink: 0;
+        }
+      }
+
+      .card_hint {
+        margin: 0 0 16px;
+        font-size: 13px;
+        color: #5d6b98;
+      }
+
+      .submit_row {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+    }
+
+    .feedback_panel {
+      background: #f9f9fb;
+
+      h3 {
+        margin-bottom: 16px;
+      }
+
+      .feedback_waiting {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 24px 4px;
+
+        .waiting_dot {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: #af49fa;
+          animation: waiting-bounce 1.2s ease-in-out infinite;
+
+          &:nth-child(2) {
+            animation-delay: 0.15s;
+          }
+          &:nth-child(3) {
+            animation-delay: 0.3s;
+          }
+        }
+
+        .waiting_text {
+          margin-left: 10px;
+          font-size: 14px;
+          color: #5d6b98;
+        }
+      }
+
+      .feedback_actions {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-top: 20px;
+
+        .credits_left {
+          margin-left: auto;
+          font-size: 13px;
+          font-weight: 500;
+          color: #5d6b98;
+        }
+      }
+    }
+  }
+}
+
+@keyframes waiting-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-6px);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1100px) {
+  .practice_view .practice_body {
+    flex-direction: column;
+
+    .practice_script {
+      max-width: none;
+      position: static;
+      width: 100%;
+    }
+  }
+}
