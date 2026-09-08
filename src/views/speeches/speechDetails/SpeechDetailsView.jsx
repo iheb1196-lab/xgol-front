@@ -99,7 +99,7 @@ const SpeechDetailsView = () => {
               id="title"
               className="input"
               placeholder="type your speech title"
-              value={speechDetails?.title}
+              value={speechDetails?.title ?? ""}
               disabled
             />
           </div>
@@ -112,7 +112,7 @@ const SpeechDetailsView = () => {
               id="text"
               className="input"
               placeholder="write your speech"
-              value={speechDetails?.text}
+              value={speechDetails?.text ?? ""}
               disabled
               rows={10}
             />

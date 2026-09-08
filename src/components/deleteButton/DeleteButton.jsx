@@ -3,17 +3,19 @@ import Iconify from "../iconify/iconify";
 import Modal from "@mui/material/Modal";
 import { useState } from "react";
 import CustomButton from "../customButton";
+import "../modal/modal.scss";
 
 const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: "20%",
+  width: "min(440px, 100%)",
+  maxHeight: "100%",
+  overflowY: "auto",
+  boxSizing: "border-box",
   bgcolor: "background.paper",
   boxShadow: 24,
-  p: "44px 80px",
+  p: { xs: "28px 24px", sm: "40px 56px" },
   borderRadius: "20px",
+  textAlign: "center",
+  outline: "none",
 };
 const DeleteButton = ({
   label = "Delete",
@@ -51,8 +53,8 @@ const DeleteButton = ({
       <Modal
         open={open}
         onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
+        aria-labelledby="delete-confirmation-title"
+        className="custom-modal"
       >
         <Box
           sx={style}
@@ -63,7 +65,9 @@ const DeleteButton = ({
           gap={3}
         >
           <img src="/assets/icons/error.svg" alt="" />
-          <h3 className="m-0">{confirmationTitle}</h3>
+          <h3 className="m-0" id="delete-confirmation-title">
+            {confirmationTitle}
+          </h3>
           <p className="m-0">{confirmationMessage}</p>
           <Box display={"flex"} gap={4}>
             <CustomButton text={"Cancel"} handleClick={handleClose} />

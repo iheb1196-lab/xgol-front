@@ -161,7 +161,7 @@ const WriteSpeech = () => {
       if (data?.credits - 2 >= 0) {
         confirmSubmitSpeech(payload, data?.credits);
       } else {
-        showToast(`Not enought credits`, "error");
+        showToast(`Not enough credits`, "error");
       }
     } catch (error) {
       showToast(`Couldn't get your current credits`, "error");
@@ -186,7 +186,7 @@ const WriteSpeech = () => {
       if (data?.credits - 2 >= 0) {
         confirmImproveSpeech(data?.credits);
       } else {
-        showToast(`Not enought credits`, "error");
+        showToast(`Not enough credits`, "error");
       }
     } catch (error) {
       showToast(`Couldn't get your current credits`, "error");
@@ -288,9 +288,7 @@ const WriteSpeech = () => {
                   { name: "submit improved speech", code: "improved" },
                 ]}
                 optionLabel="name"
-                placeholder={
-                  <span className="text-white">Which Speech to Submit</span>
-                }
+                placeholder="Which Speech to Submit"
                 className="w-auto"
                 disabled={loading || improving}
               />
@@ -369,7 +367,7 @@ const WriteSpeech = () => {
           </Box>
         </Stack>
       </div>
-      <ConfirmDialog style={{ maxWidth: "30%" }} />
+      <ConfirmDialog style={{ width: "min(480px, calc(100vw - 32px))" }} />
     </div>
   );
 };

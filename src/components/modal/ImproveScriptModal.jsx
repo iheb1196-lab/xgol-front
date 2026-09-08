@@ -35,14 +35,21 @@ const ImproveScriptModal = ({ open, handleClose, onImprove }) => {
       <Modal
         open={open}
         onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
+        aria-labelledby="improve-speech-title"
         className="custom-modal"
       >
         <Box className="modal">
+          <button
+            type="button"
+            className="modal_close"
+            aria-label="Close"
+            onClick={handleClose}
+          >
+            &#10005;
+          </button>
           <div className="modal_header mb-4">
-            <img src="/assets/icons/speech/improve-modal.svg" alt="icon" />
-            <h3>Improve Speech</h3>
+            <img src="/assets/icons/speech/improve-modal.svg" alt="" />
+            <h3 id="improve-speech-title">Improve Speech</h3>
           </div>
           <p className="text-sm text-gray-500 mt-0 mb-6">
             What should your speech become? The AI rewrites it live, right next

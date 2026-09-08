@@ -26,7 +26,6 @@ const SubscriptionView = () => {
   }, []);
 
   const currentLicence = licenceResponse?.userLicense;
-  console.log(currentLicence)
   // Use licenceResponse to dynamically set cardsData
   const totalCredits = currentLicence?.license?.credits ?? 0;
   const usedCredits = Math.min(
@@ -158,9 +157,9 @@ const SubscriptionView = () => {
           <div className="upgradeview-license-details">
             <div className="details-section-title">License details</div>
             <div className="cards-container">
-              {cardsData?.map((item, index) => (
-                <div className="card-wrapper">
-                  <div className="card-details" key={item.id}>
+              {cardsData?.map((item) => (
+                <div className="card-wrapper" key={item.id}>
+                  <div className="card-details">
                     <img className="card-img" src={item?.imgSrc} alt="" />
                     {item.text}
                   </div>

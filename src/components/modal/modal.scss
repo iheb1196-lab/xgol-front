@@ -1,14 +1,46 @@
 .custom-modal {
+  // Flex-center instead of absolute translate so the dialog can never be
+  // pushed off-screen; on short viewports it shrinks and scrolls inside.
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+
   .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
     background-color: white;
-    width: 450px;
-    padding: 44px 80px;
+    width: min(600px, 100%);
+    max-height: 100%;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 36px clamp(24px, 6vw, 72px);
     border-radius: 20px;
     gap: 16px;
+    outline: none;
+
+    .modal_close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      border-radius: 50%;
+      background: transparent;
+      color: #6b7280;
+      font-size: 20px;
+      line-height: 1;
+      cursor: pointer;
+
+      &:hover {
+        background: #f3f4f6;
+        color: #111827;
+      }
+    }
+
     .modal_header {
       display: flex;
       flex-direction: column;
@@ -20,6 +52,7 @@
         line-height: 32px;
         letter-spacing: 0em;
         text-align: center;
+        margin: 8px 0 0;
       }
     }
   }
