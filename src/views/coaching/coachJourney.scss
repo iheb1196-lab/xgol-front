@@ -52,6 +52,19 @@
   .coach-work:focus, #coach-mission-title:focus { outline: none; }
 }
 
+.coach-tour-modal {
+  z-index: 10000 !important;
+  .coach-tour-backdrop { background: transparent; }
+  .coach-tour-mask { position: absolute; inset: 0; pointer-events: none; }
+  .MuiDialog-container { pointer-events: none; }
+  .coach-tour-tooltip {
+    position: fixed; margin: 0; pointer-events: auto;
+    max-width: calc(100vw - 32px); max-height: calc(100dvh - 32px);
+    display: flex; flex-direction: column; overflow: hidden;
+  }
+  .coach-tour-top, .coach-tour-progress, .coach-tour-actions { flex-shrink: 0; }
+  .coach-tour-copy { min-height: 0; overflow-y: auto; overscroll-behavior: contain; }
+}
 .coach-tour-tooltip {
   width: min(420px, calc(100vw - 32px)); padding: 25px; box-sizing: border-box; border-radius: 20px; background: #fffdf9; color: #292637; box-shadow: 0 18px 70px #20133333; font-family: "Poppins", system-ui, sans-serif;
   button { font: inherit; cursor: pointer; border: 0; border-radius: 9px; padding: 10px 13px; min-height: 42px; color: #70667f; background: transparent; font-size: 12px; }
@@ -61,6 +74,11 @@
   .coach-tour-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; > span { display: flex; gap: 9px; align-items: center; font-size: 9px; font-weight: 600; letter-spacing: 1px; color: #76619c; } button { display: grid; place-items: center; padding: 6px; margin: -8px; min-width: 36px; } }
   .coach-tour-progress { display: flex; align-items: center; gap: 5px; margin: 22px 0; > span { width: 20px; height: 4px; border-radius: 4px; background: #e8e1f1; &.is-active { background: #8670b4; width: 32px; } } small { margin-left: auto; font-size: 10px; color: #8d809e; } }
   .coach-tour-actions { display: flex; justify-content: space-between; gap: 14px; align-items: center; .coach-tour-next { display: inline-flex; align-items: center; gap: 9px; background: #6550c8; color: #fff; font-weight: 500; } }
+}
+
+@media (max-width: 700px) {
+  .coach-tour-modal .coach-tour-tooltip { max-height: min(65dvh, 460px); padding: 20px; }
+  .coach-tour-tooltip { h2 { font-size: 20px; margin-top: 16px; } p { font-size: 12px; line-height: 1.75; } .coach-tour-progress { margin: 16px 0; } }
 }
 
 @media (max-width: 1100px) {

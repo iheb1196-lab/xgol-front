@@ -6,7 +6,7 @@ import { coachingApi, evaluateSnack } from "../../features/coaching/coachingServ
 jest.mock("../../features/coaching/coachingService", () => ({ coachingApi: jest.fn(), evaluateSnack: jest.fn() }));
 jest.mock("@iconify/react", () => ({ Icon: () => null }));
 jest.mock("../../components/practice/AudioRecorder", () => () => <div>Audio recorder</div>);
-jest.mock("react-joyride", () => ({ __esModule: true, ACTIONS: { CLOSE: "close" }, STATUS: { FINISHED: "finished", SKIPPED: "skipped" }, default: ({ callback }) => <button onClick={() => callback({ status: "finished" })}>Finish guided tour</button> }));
+jest.mock("./CoachTour", () => ({ __esModule: true, scrollToTourTarget: jest.fn(), default: ({ onClose }) => <button onClick={onClose}>Finish guided tour</button> }));
 const plan = { id: "personal-plan", createdAt: "2026-09-08T10:00:00Z", checkIn: { energy: "nervous", minutes: 2, situation: "Ask my manager for a pilot" }, greeting: "Let's find your first sentence.", title: "Ask for a small pilot", reason: "A clear request helps your manager decide.", warmup: "Name the decision you need.", prompt: "Ask your manager to try your idea for two weeks.", opening: "I'd like to try a small pilot.", focus: "Make one concrete request.", curveball: "What would you stop doing to make time?", takeaway: "Make your request at your next meeting." };
 let dashboard;
 beforeEach(() => {

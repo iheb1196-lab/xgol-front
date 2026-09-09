@@ -7,7 +7,7 @@ import FeedbackRenderer from "../../components/practice/FeedbackRenderer";
 import CoachProfile from "./CoachProfile";
 import CoachingSession from "./CoachingSession";
 import CoachCompanion from "./CoachCompanion";
-import CoachTour from "./CoachTour";
+import CoachTour, { scrollToTourTarget } from "./CoachTour";
 import { QUICK_STARTS, eventDays } from "./coachingData";
 import "./coaching.scss";
 import "./coachJourney.scss";
@@ -143,6 +143,6 @@ export default function CoachingHome() {
     <section id="coach-memory" className="coach-memory" ref={preferences} aria-labelledby="coach-memory-title"><div><span className="coach-eyebrow"><Target size={15} aria-hidden="true" />WHAT WE'RE WORKING TOWARD</span><h2 id="coach-memory-title">{profile.goal}</h2><p>{profile.audience ? `Speaking to ${profile.audience}` : "Tell your coach who you speak to for more relevant practice."}</p><div className="coach-preferences-tags"><span>{profile.language}</span><span>{profile.style} feedback</span><span>{profile.minutes}-minute breaks</span></div></div><button disabled={locked} onClick={() => setEditing(!editing)}><Settings2 size={16} aria-hidden="true" />{editing ? "Close preferences" : "Update my preferences"}</button></section>
     {editing && <CoachProfile profile={profile} onSave={saved => { setData(current => ({ ...current, profile: saved })); setEditing(false); }} onCancel={() => setEditing(false)} />}
     <footer className="coach-footer"><Sparkles size={15} aria-hidden="true" />Practice here. Find your voice out there.</footer>
-    {tour && <CoachTour run={tour} onClose={() => { dismissGuide(); document.getElementById("coach-checkin")?.scrollIntoView({ behavior: "smooth" }); }} />}
+    {tour && <CoachTour run={tour} onClose={() => { dismissGuide(); scrollToTourTarget(document.getElementById("coach-checkin")); }} />}
   </main>;
 }
